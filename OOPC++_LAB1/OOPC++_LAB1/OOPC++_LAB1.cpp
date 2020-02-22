@@ -4,16 +4,16 @@
 #include "pch.h"
 #include <iostream>
 using namespace std;
- bool equal(int,int);
+ bool EqualNumbers(int,int);
  void add(int &,int );
 
 
 int main()
 {
-	int a = 3;
+	int a = -3;
 	int tmp = a;
 	int b = 3;
-	bool isEqual = equal(a,b);
+	bool isEqual = EqualNumbers(a,b);
 	cout << "is " << a << " equal to " << b << "? " << isEqual<<"\n";
 	add(a,
 		b);
@@ -21,18 +21,54 @@ int main()
 }
 
 static void add(int &a,int b) {
-	int *x = &a;
-	int y = b;
-	while (!equal(y,0)) {
-		int carry = *x & y;
-		*x = *x^ y;
-		y= carry << 1;
+	int result = 0;
+	int abit, bbit, cbit = 0, nbit;
+	int last_bit = sizeof(int) * 8;
+	for (int n = 0; n < last_bit; n++)
+	{
+		nbit = 1 << n;
+		abit = a & nbit;
+		bbit = b & nbit;
+		if (abit ^ bbit)
+		{
+			result |= ~cbit & nbit;
+		}
+		else if (abit)
+		{
+			result |= cbit;
+			cbit = nbit;
+		}
+		else
+		{
+			result |= cbit;
+			cbit = 0;
+		}
+		cbit <<= 1;
+
 	}
+	a = result;
+	
 }
-static bool equal(int a,int b) {
-  int isEqual = 1;
-	if (a^b)isEqual = 0;
-	return isEqual;
+static bool EqualNumbers(int a, int b)
+{
+	int aa, bb, ii;
+	int equal = 0;
+	for (int i = sizeof(int) * 8; i > 0; i--)
+	{
+		ii = i >> 1;
+		aa = a & i;
+		bb = b & i;
+		if (!(aa ^ bb))
+		{
+			equal = 1;
+		}
+		else
+		{
+			equal = 0;
+		}
+	}
+	return equal;
+
 }
 
 
