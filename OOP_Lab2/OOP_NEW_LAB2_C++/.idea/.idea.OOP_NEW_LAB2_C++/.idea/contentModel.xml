@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\admin\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\admin\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_OOP_NEW_LAB2_C++.-1934433469.00" t="ExcludeRecursive" />
+    <e p="C:\Users\admin\Desktop\OOP_Labs\OOP\OOP_NEW_LAB2_C++" t="IncludeFlat">
+      <e p="Debug" t="ExcludeRecursive" />
+      <e p="OOP_NEW_LAB2_C++" t="IncludeRecursive">
+        <e p="Debug" t="ExcludeRecursive" />
+        <e p="OOP_NEW_LAB2_C++.cpp" t="Include" />
+        <e p="OOP_NEW_LAB2_C++.vcxproj" t="IncludeRecursive" />
+        <e p="Str.cpp" t="Include" />
+        <e p="Str.h" t="Include" />
+        <e p="Text.cpp" t="Include" />
+        <e p="Text.h" t="Include" />
+      </e>
+      <e p="OOP_NEW_LAB2_C++.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
