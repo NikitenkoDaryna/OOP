@@ -7,18 +7,20 @@ namespace oop_lab3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             TableOfStudents students = new TableOfStudents(10);
             students[0] = new Student {Name = "Daryna", Surname = "Nikitenko", ByPatronomic = "Dmitriivna"};
+            students[1] = new Student {Name = "Kseniia", Surname = "Zinkova", ByPatronomic = "Vi"};
             Console.WriteLine(students[0].Name);
-            Console.WriteLine("StudentsCount" + students.StudentsCount);
+            Console.WriteLine(students[1].Surname);
+            Console.WriteLine("StudentsCount " + students.StudentsCount);
         }
     }
 
     class Student
     {
-        public string name;
-
+        private string name;
+        private string surname;
+        private string byPatronomic;
         public string Name
         {
             get => name;
@@ -37,8 +39,7 @@ namespace oop_lab3
             set => byPatronomic = value;
         }
 
-        private string surname;
-        private string byPatronomic;
+        
     }
 
     class TableOfStudents
