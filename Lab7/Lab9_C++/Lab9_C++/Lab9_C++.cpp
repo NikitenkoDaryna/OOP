@@ -23,7 +23,7 @@ void push(Node** head_ref, double new_data) {
         (*head_ref)->prev = new_node;
     (*head_ref) = new_node;
 }
-void append(Node** head_ref, int new_data)
+void append(Node** head_ref, double new_data)
 {
     /* 1. allocate node */
     Node* new_node = new Node();
